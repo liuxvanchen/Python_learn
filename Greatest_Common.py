@@ -7,4 +7,4 @@ def greatest_common(a,b):
         last=b%a
         while last!=0:
             lsat=a%last
-            greatest_common( )
+            greatest_common()
