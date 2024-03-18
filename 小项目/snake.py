@@ -17,7 +17,7 @@ RED = (255, 0, 0)
 GREEN = (0, 255, 0)
 
 BLOCK_SIZE = 20
-SNAKE_SPEED = 6
+SNAKE_SPEED = 60
 
 
 class Snake:
