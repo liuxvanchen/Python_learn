@@ -6,3 +6,10 @@ saved_page.html
 somefile.html
 interactive_map.html
 shows.csv
+logs
+dataset
+ants_image
+ants_label
+bees_image
+bees_label
+cifar-10-batches-py
