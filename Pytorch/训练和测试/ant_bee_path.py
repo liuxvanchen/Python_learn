@@ -1,8 +1,9 @@
 import os
 
 # 定义你的图片文件夹路径
-ants_image_path = 'D:/Python/pythonProject1/learn/Pytorch/dataset/ants_image'
-bees_image_path = 'D:/Python/pythonProject1/learn/Pytorch/dataset/bees_image'
+ants_image_path = "D:\\Python\\pythonProject1\\learn\\Pytorch\\dataset\\ants_iamge"
+bees_image_path = "D:\\Python\\pythonProject1\\learn\\Pytorch\\dataset\\bees_image"
+
 
 # 定义函数来生成标签文件
 def generate_label_files(image_folder, label):
@@ -14,6 +15,7 @@ def generate_label_files(image_folder, label):
             # 写入标签
             with open(label_path, 'w') as file:
                 file.write(str(label))
+
 
 # 为蚂蚁和蜜蜂图片生成标签文件
 generate_label_files(ants_image_path, 0)  # 0代表蚂蚁

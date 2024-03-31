@@ -7,9 +7,10 @@ somefile.html
 interactive_map.html
 shows.csv
 logs
-dataset
-ants_image
-ants_label
-bees_image
-bees_label
+
 cifar-10-batches-py
+dataset_CIFAR10
+imgs
+dataset
+checkpoints
+train_model_9.pth
