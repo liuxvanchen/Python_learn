@@ -3,7 +3,7 @@ import torchvision
 from PIL import Image
 from torch import nn
 
-img_path = "D:\\Python\\pythonProject1\\learn\\Pytorch\\imgs\\dog.png"
+img_path = "D:\\Python\\pythonProject1\\learn\\Pytorch\\imgs\\cat.png"
 image = Image.open(img_path)
 print(image)
 image = image.convert('RGB')

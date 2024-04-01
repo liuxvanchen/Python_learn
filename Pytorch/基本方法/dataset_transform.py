@@ -5,9 +5,9 @@ from torch.utils.tensorboard import SummaryWriter
 dataset_tranform = torchvision.transforms.Compose([
     torchvision.transforms.ToTensor()
 ])
-train_set = torchvision.datasets.CIFAR10(root="./dataset_CIFAR10", train=True, transform=dataset_tranform,
+train_set = torchvision.datasets.CIFAR10(root="../dataset_CIFAR10", train=True, transform=dataset_tranform,
                                          download=True)
-test_set = torchvision.datasets.CIFAR10(root="./dataset_CIFAR10", train=False, transform=dataset_tranform,
+test_set = torchvision.datasets.CIFAR10(root="../dataset_CIFAR10", train=False, transform=dataset_tranform,
                                         download=True)
 
 # print(test_set[0])
