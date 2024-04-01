@@ -7,7 +7,7 @@ from torch.utils.tensorboard import SummaryWriter
 # 从model文件引入所有
 from model import *
 
-data_path = "./dataset_CIFAR10"
+data_path = "../dataset_CIFAR10"
 train_data = torchvision.datasets.CIFAR10(root=data_path, train=True, transform=torchvision.transforms.ToTensor())
 test_data = torchvision.datasets.CIFAR10(root=data_path, train=False, transform=torchvision.transforms.ToTensor())
 
@@ -68,23 +68,23 @@ for i in range(epoch):
 
     # 测试步骤开始
     total_test_loss = 0
-    #设置梯度都无，因为只测试
+    # 设置梯度都无，因为只测试
     with torch.no_grad():
         for data in test_dataloader:
             imgs, targets = data
             output = train_model(imgs)
             loss = loss_fn(output, targets)
             total_test_loss = total_test_loss + loss.item()
-            accuracy=(output.argmax(1)==targets).sum()
-            toatl_accuracy=toatl_accuracy+accuracy
+            accuracy = (output.argmax(1) == targets).sum()
+            toatl_accuracy = toatl_accuracy + accuracy
 
     print("整体测试集的loss{}".format(total_test_loss))
-    print("整体测试集上的正确率：{}".format(toatl_accuracy/test_data_size))
-    writer.add_scalar("test_accuracy",toatl_accuracy/test_data_size,total_test_step)
+    print("整体测试集上的正确率：{}".format(toatl_accuracy / test_data_size))
+    writer.add_scalar("test_accuracy", toatl_accuracy / test_data_size, total_test_step)
     writer.add_scalar("test_loss", total_test_loss, total_test_step)
     total_test_step = total_test_step + 1
 
-    torch.save(train_model,"train_model_{}.pth".format(i))
+    torch.save(train_model, "train_model_{}.pth".format(i))
     print("模型已保存")
 
 writer.close()

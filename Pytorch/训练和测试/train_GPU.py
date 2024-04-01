@@ -9,7 +9,7 @@ from torch.utils.tensorboard import SummaryWriter
 # from model import *
 # device=torch.device("cpu")
 
-data_path = "./dataset_CIFAR10"
+data_path = "../dataset_CIFAR10"
 train_data = torchvision.datasets.CIFAR10(root=data_path, train=True, transform=torchvision.transforms.ToTensor())
 test_data = torchvision.datasets.CIFAR10(root=data_path, train=False, transform=torchvision.transforms.ToTensor())
 
@@ -69,8 +69,8 @@ total_test_step = 0
 epoch = 10
 
 # 添加tensorboard
-writer = SummaryWriter("train_logs")
-start_time=time.time()
+# writer = SummaryWriter("train_logs")
+# start_time=time.time()
 
 for i in range(epoch):
     print("--------第 {} 轮训练开始---------".format(i + 1))
@@ -94,10 +94,10 @@ for i in range(epoch):
         total_train_step += 1
         # 逢一百打印记录：
         if total_train_step % 100 == 0:
-            end_time=time.time()
-            print(end_time-start_time)
+            # end_time=time.time()
+            # print(end_time-start_time)
             print("训练次数：{}，Loss：{}".format(total_train_step, loss.item()))
-            writer.add_scalar("train_loss", loss.item(), total_train_step)
+            # writer.add_scalar("train_loss", loss.item(), total_train_step)
 
     # 测试步骤开始
     total_test_loss = 0
@@ -116,11 +116,11 @@ for i in range(epoch):
 
     print("整体测试集的loss{}".format(total_test_loss))
     print("整体测试集上的正确率：{}".format(toatl_accuracy / test_data_size))
-    writer.add_scalar("test_accuracy", toatl_accuracy / test_data_size, total_test_step)
-    writer.add_scalar("test_loss", total_test_loss, total_test_step)
+    # writer.add_scalar("test_accuracy", toatl_accuracy / test_data_size, total_test_step)
+    # writer.add_scalar("test_loss", total_test_loss, total_test_step)
     total_test_step = total_test_step + 1
 
     torch.save(train_model, "train_model_{}.pth".format(i))
     print("模型已保存")
 
-writer.close()
+# writer.close()
