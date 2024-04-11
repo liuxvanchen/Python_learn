@@ -2,7 +2,7 @@ from osgeo import gdal
 import matplotlib.pyplot as plt
 
 # 打开GeoTIFF文件
-dataset = gdal.Open('C:/Users/Lenovo/Desktop/js/lll.tif', gdal.GA_ReadOnly)
+dataset = gdal.Open('D:\Python\pythonProject1\论文\Forest.tif', gdal.GA_ReadOnly)
 
 # 获取栅格波段的数量
 band_count = dataset.RasterCount
@@ -19,7 +19,7 @@ miny = maxy + dataset.RasterYSize * px_h
 
 # 使用matplotlib显示图像
 plt.imshow(data, cmap='gray')  # 对于单波段图像，通常使用灰度图
-plt.colorbar()  # 显示颜色条
+# plt.colorbar()  # 显示颜色条
 plt.title('TIFF Image Display')
 plt.show()
 

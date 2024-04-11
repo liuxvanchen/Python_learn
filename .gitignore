@@ -14,3 +14,4 @@ imgs
 dataset
 checkpoints
 train_model_9.pth
+train_logs
