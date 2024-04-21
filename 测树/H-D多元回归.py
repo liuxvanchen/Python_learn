@@ -26,21 +26,21 @@ def mean_relative_error(y_true, y_pred):
 mymodel = np.poly1d(np.polyfit(x, y, 5))
 print(mymodel)
 
-# plt.rcParams['font.sans-serif'] = ['SimSun']  # 或者 ['Microsoft YaHei']
-#
-# plt.scatter(x, y, label='数据')
-#
-# myline = np.linspace(4, 48, 12)  # 从位置4开始，到位置48结束
-#
-# # 绘制原始离散点
-# plt.scatter(x, y)
-# # 画出多项式回归线
-# plt.plot(myline, mymodel(myline))
-# plt.title('H-D多项式拟合（五次）')
-# plt.show()
+plt.rcParams['font.sans-serif'] = ['SimSun']  # 或者 ['Microsoft YaHei']
 
-# # 输出拟合度r
-# print(r2_score(y, mymodel(x)))
+plt.scatter(x, y, label='数据')
+
+myline = np.linspace(4, 48, 12)  # 从位置4开始，到位置48结束
+
+# 绘制原始离散点
+plt.scatter(x, y)
+# 画出多项式回归线
+plt.plot(myline, mymodel(myline))
+plt.title('材积-胸径多项式拟合（五次）')
+plt.show()
+
+# 输出拟合度r
+print(r2_score(y_test, mymodel(x_test)))
 # 使用模型预测测试数据
 y_pred_test = mymodel(x_test)
 
