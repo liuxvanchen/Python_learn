@@ -52,7 +52,7 @@ plt.plot(x_line, y_line, color='red', label='指数拟合曲线')
 
 plt.xlabel('x')
 plt.ylabel('y')
-plt.title('H-D指数拟合')
+plt.title('材积-胸径指数拟合')
 plt.legend()
 plt.grid(True)
 plt.show()
