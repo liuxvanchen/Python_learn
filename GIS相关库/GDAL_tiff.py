@@ -2,7 +2,7 @@ from osgeo import gdal
 import matplotlib.pyplot as plt
 
 # 打开GeoTIFF文件
-dataset = gdal.Open('D:\Python\pythonProject1\论文\Forest.tif', gdal.GA_ReadOnly)
+dataset = gdal.Open('D:\\Python\\pythonProject1\\论文\\Forest.tif', gdal.GA_ReadOnly)
 
 # 获取栅格波段的数量
 band_count = dataset.RasterCount

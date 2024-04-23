@@ -1,7 +1,7 @@
 from osgeo import gdal
 
 # 打开TIFF文件
-dataset = gdal.Open('D:\\WeChat\\WeChat Files\\wxid_lvjv33bjbkg222\\FileStorage\\File\\2024-04\\人工林数据\\人工林数据\\人工林郭庆华\\pf20.tif')
+dataset = gdal.Open('')
 
 # 获取地理变换信息
 geotransform = dataset.GetGeoTransform()
