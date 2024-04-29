@@ -1,7 +1,7 @@
 from osgeo import gdal
 
 # 打开TIFF文件
-dataset = gdal.Open('')
+dataset = gdal.Open('D:\\Python\\pythonProject1\\论文\\forest_new.tif')
 
 # 获取地理变换信息
 geotransform = dataset.GetGeoTransform()
