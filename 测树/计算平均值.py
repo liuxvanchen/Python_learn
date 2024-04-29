@@ -1,6 +1,6 @@
 import pandas as pd
 
-excel_file = '序号为偶数的数据.xlsx'
+excel_file = '序号为奇数的数据.xlsx'
 
 # 读取数据
 data = pd.read_excel(excel_file)

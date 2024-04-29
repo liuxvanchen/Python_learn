@@ -1,5 +1,6 @@
 import os
 import random
+import matplotlib.pyplot as plt
 
 import numpy
 
@@ -30,4 +31,6 @@ print("file exists:", file_exists)
 
 file_size = os.path.getsize('file.txt')
 print("file size:", file_size, "bytes")
+
+
 
