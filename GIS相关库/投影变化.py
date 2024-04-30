@@ -1,8 +1,8 @@
 from osgeo import gdal, osr
 
 # 输入和输出文件
-input_file = 'D:\\Python\\pythonProject1\\论文\\forest_new1.tif'
-output_file = 'D:\\Python\\pythonProject1\\论文\\forest_new.tif'
+input_file = 'D:\\Python\\data\\2020pnf.tif'
+output_file = 'D:\\Python\\data\\2020pnf2.tif'
 
 # 打开源文件
 src = gdal.Open(input_file)
